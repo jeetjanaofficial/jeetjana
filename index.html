@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparna’s Makeover | Luxury Beauty Parlour & Bridal Studio</title>
+    <!-- Google Fonts: Playfair Display for Editorial Serifs, Inter for Modern UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ==========================================================
+           APARNA’S MAKEOVER - EDITORIAL LUXURY DESIGN SYSTEM
+           ========================================================== */
+        :root {
+            --bg-ivory: #FBF9F5;
+            --bg-cream: #F4EFEB;
+            --bg-white: #FFFFFF;
+            --champagne-gold: #C5A059;
+            --champagne-light: #E6D5B8;
+            --rose-blush: #E8D3CE;
+            --rose-muted: #D1A39B;
+            --burgundy-accent: #4A2E35;
+            --dark-charcoal: #1A1A1A;
+            --text-muted: #666666;
+            --border-subtle: rgba(197, 160, 89, 0.2);
+            --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-luxury: 0 20px 40px -15px rgba(26, 26, 26, 0.07);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-ivory);
+            color: var(--dark-charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            letter-spacing: -0.015em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        video {
+            background-color: #1A1A1A;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* --- LUXURY BUTTONS --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 34px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 0;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--champagne-gold);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background-color: var(--champagne-gold);
+            color: #FFFFFF;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--burgundy-accent);
+            z-index: -1;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+
+        .btn-primary:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .btn-primary:hover {
+            border-color: var(--burgundy-accent);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #FFFFFF;
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-outline:hover {
+            background-color: #FFFFFF;
+            color: var(--dark-charcoal);
+            border-color: #FFFFFF;
+        }
+
+        .btn-outline-dark {
+            background-color: transparent;
+            color: var(--dark-charcoal);
+            border-color: var(--dark-charcoal);
+        }
+
+        .btn-outline-dark:hover {
+            background-color: var(--dark-charcoal);
+            color: #FFFFFF;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        /* --- EDITORIAL HEADER --- */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(251, 249, 245, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: var(--transition-smooth);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100px;
+        }
+
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--dark-charcoal);
+        }
+
+        .brand-logo span {
+            color: var(--champagne-gold);
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--dark-charcoal);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--champagne-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--champagne-gold);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--dark-charcoal);
+        }
+
+        /* --- VIEW ROUTER SECTIONS --- */
+        .view-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .view-section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* --- LUXURY HERO SECTION (BLACK BACKGROUND PRESERVED) --- */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            z-index: 1;
+            background-color: #000;
+        }
+
+        .hero-cinematic-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(26,26,26,0.3) 0%, rgba(26,26,26,0.65) 100%);
+            z-index: 2;
+        }
+
+        /* --- MOVED "BEAUTY BEGINS WITH YOU" EDITORIAL SECTION --- */
+        .hero-moved-content {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-moved-content .hero-tag-light {
+            display: inline-block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--champagne-gold);
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--champagne-gold);
+            padding-bottom: 5px;
+        }
+
+        .hero-moved-content h2 {
+            font-size: clamp(38px, 6vw, 68px);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            font-style: italic;
+            color: var(--dark-charcoal);
+        }
+
+        .hero-moved-content p {
+            font-size: clamp(15px, 1.8vw, 18px);
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            color: var(--text-muted);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* --- TRUST & FEATURES EDITORIAL STRIP --- */
+        .trust-editorial-strip {
+            background-color: var(--bg-cream);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 50px 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .trust-box i {
+            font-size: 24px;
+            color: var(--champagne-gold);
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .trust-box h5 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        /* --- EDITORIAL SECTIONS COMMON --- */
+        .section-space {
+            padding: 120px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 70px auto;
+        }
+
+        .section-header span {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--champagne-gold);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(34px, 4.5vw, 50px);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--dark-charcoal);
+        }
+
+        /* --- EDITORIAL SERVICES (VERTICAL 9:16 REELS/SHORTS FORMAT) --- */
+        .services-editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            justify-items: center;
+        }
+
+        .service-editorial-card {
+            position: relative;
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            box-shadow: var(--shadow-luxury);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        /* Vertical 9:16 Reels/Shorts Container */
+        .service-img-wrap {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            position: relative;
+        }
+
+        /* 9:16 Service Video Without Distortion */
+        .service-img-wrap video, 
+        .service-video {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            display: block;
+            background-color: #1a1a1a;
+        }
+
+        .service-info-box {
+            padding: 40px;
+        }
+
+        .service-info-box h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .service-info-box p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .explore-link {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: var(--champagne-gold);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .explore-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .explore-link:hover i {
+            transform: translateX(6px);
+        }
+
+        /* --- PORTFOLIO GALLERY (VERTICAL REELS/SHORTS 9:16 RATIO) --- */
+        .gallery-filter-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 60px;
+        }
+
+        .filter-chip {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            padding: 10px 22px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-charcoal);
+            transition: var(--transition-smooth);
+        }
+
+        .filter-chip.active, .filter-chip:hover {
+            background: var(--champagne-gold);
+            border-color: var(--champagne-gold);
+            color: #FFFFFF;
+        }
+
+        .gallery-editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .gallery-card-item {
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-luxury);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+            width: 100%;
+        }
+
+        /* Vertical 9:16 Reels/Shorts Video Container */
+        .gallery-video-wrap {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            position: relative;
+        }
+
+        /* 9:16 Video fill without distortion */
+        .gallery-card-video {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            display: block;
+            background-color: #1a1a1a;
+        }
+
+        .gallery-card-content {
+            padding: 24px 22px 26px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .gallery-cat-tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--champagne-gold);
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .gallery-card-content h4 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            color: var(--dark-charcoal);
+        }
+
+        .gallery-card-content p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-weight: 300;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        /* Lightbox Fullscreen Modal */
+        .fullscreen-lightbox {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .fullscreen-lightbox.open {
+            display: flex;
+        }
+
+        .fullscreen-lightbox img {
+            max-width: 85%;
+            max-height: 85vh;
+            object-fit: contain;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+        }
+
+        .lightbox-close-btn {
+            position: absolute;
+            top: 30px; right: 40px;
+            color: #FFFFFF;
+            font-size: 36px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .lightbox-close-btn:hover {
+            color: var(--champagne-gold);
+        }
+
+        /* --- ABOUT US & ARTISTS --- */
+        .about-split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image-stack {
+            position: relative;
+        }
+
+        .about-image-stack img {
+            width: 85%;
+            height: 520px;
+            object-fit: cover;
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .about-image-stack img.floating-img {
+            position: absolute;
+            bottom: -50px;
+            right: 0;
+            width: 55%;
+            height: 320px;
+            border: 8px solid var(--bg-ivory);
+        }
+
+        .artists-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 60px;
+        }
+
+        .artist-editorial-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-luxury);
+            overflow: hidden;
+        }
+
+        .artist-img-box {
+            height: 360px;
+            overflow: hidden;
+        }
+
+        .artist-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .artist-editorial-card:hover .artist-img-box img {
+            transform: scale(1.04);
+        }
+
+        .artist-details {
+            padding: 30px;
+        }
+
+        .artist-details h4 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .artist-details .role-tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--champagne-gold);
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .artist-details p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .artist-meta-list {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 15px;
+            font-size: 12px;
+            color: var(--dark-charcoal);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        /* --- PRICES EDITORIAL TABLE --- */
+        .pricing-editorial-container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .price-category-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .price-category-box h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 15px 0;
+            border-bottom: 1px dashed var(--border-subtle);
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-row .service-name {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .price-row .service-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 3px;
+        }
+
+        .price-row .service-cost {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: var(--champagne-gold);
+        }
+
+        /* --- REVIEWS EDITORIAL --- */
+        .reviews-editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .review-editorial-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            padding: 45px 35px;
+            box-shadow: var(--shadow-luxury);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-stars {
+            color: var(--champagne-gold);
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .review-editorial-card p {
+            font-size: 14px;
+            font-style: italic;
+            color: var(--dark-charcoal);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .client-meta h5 {
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 3px;
+        }
+
+        .client-meta span {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--champagne-gold);
+        }
+
+        /* --- CONTACT LUXURY EXPERIENCE --- */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+        }
+
+        .contact-details-box {
+            background: var(--burgundy-accent);
+            color: #FFFFFF;
+            padding: 60px;
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .contact-details-box span {
+            color: var(--champagne-light);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .contact-details-box h2 {
+            font-size: 38px;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info-list li {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .contact-info-list i {
+            color: var(--champagne-gold);
+            font-size: 18px;
+            margin-top: 4px;
+        }
+
+        .contact-info-list strong {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--champagne-light);
+            margin-bottom: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .contact-info-list a, .contact-info-list p {
+            font-size: 15px;
+            color: #E2E2E2;
+        }
+
+        .contact-info-list a:hover {
+            color: var(--champagne-gold);
+        }
+
+        .contact-form-wrapper {
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            padding: 60px;
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .form-field {
+            margin-bottom: 25px;
+        }
+
+        .form-field label {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--dark-charcoal);
+        }
+
+        .form-field input, .form-field select, .form-field textarea {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--bg-ivory);
+            border: 1px solid var(--border-subtle);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: var(--dark-charcoal);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+            border-color: var(--champagne-gold);
+            background: #FFFFFF;
+        }
+
+        .map-wrapper {
+            margin-top: 60px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        /* --- FOOTER --- */
+        .site-footer {
+            background-color: var(--dark-charcoal);
+            color: #FFFFFF;
+            padding: 100px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            margin-bottom: 70px;
+        }
+
+        .footer-brand .brand-logo {
+            color: #FFFFFF;
+            font-size: 32px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: #A0A0A0;
+            font-weight: 300;
+            line-height: 1.8;
+            max-width: 320px;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 25px;
+            color: var(--champagne-gold);
+        }
+
+        .footer-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-col ul li a {
+            font-size: 14px;
+            color: #A0A0A0;
+            font-weight: 300;
+        }
+
+        .footer-col ul li a:hover {
+            color: #FFFFFF;
+            padding-left: 5px;
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            color: #A0A0A0;
+            font-weight: 300;
+            margin-bottom: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #A0A0A0;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-socials a {
+            width: 38px; height: 38px;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex; align-items: center; justify-content: center;
+            color: #FFFFFF;
+            border-radius: 50%;
+        }
+
+        .footer-socials a:hover {
+            background-color: var(--champagne-gold);
+            border-color: var(--champagne-gold);
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 1024px) {
+            .services-editorial-grid, .about-split-layout, .contact-layout, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .trust-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .gallery-editorial-grid, .artists-grid, .reviews-editorial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-image-stack img.floating-img {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 100px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 100px);
+                background: var(--bg-ivory);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: var(--transition-smooth);
+                box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                left: 0;
+            }
+            .hamburger {
+                display: block;
+            }
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .services-editorial-grid {
+                grid-template-columns: 1fr;
+            }
+            .service-editorial-card {
+                max-width: 400px;
+                width: 100%;
+            }
+            .gallery-editorial-grid {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+            .gallery-card-item {
+                max-width: 400px;
+                width: 100%;
+            }
+            .artists-grid, .reviews-editorial-grid, .form-grid-2, .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .contact-details-box, .contact-form-wrapper {
+                padding: 35px 20px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================
+       EDITORIAL LUXURY HEADER & NAVIGATION
+       ========================================================== -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+            <a href="#" class="brand-logo" onclick="switchView('home')">
+                Aparna’s <span>Makeover</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#" class="nav-link active" data-view="home" onclick="switchView('home')">Home</a>
+                <a href="#" class="nav-link" data-view="about" onclick="switchView('about')">About Us</a>
+                <a href="#" class="nav-link" data-view="services" onclick="switchView('services')">Services</a>
+                <a href="#" class="nav-link" data-view="gallery" onclick="switchView('gallery')">Gallery</a>
+                <a href="#" class="nav-link" data-view="prices" onclick="switchView('prices')">Prices</a>
+                <a href="#" class="nav-link" data-view="reviews" onclick="switchView('reviews')">Reviews</a>
+                <a href="#" class="nav-link" data-view="contact" onclick="switchView('contact')">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="switchView('appointment')">Book Appointment</button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================
+       MAIN DYNAMIC VIEW ROUTER CONTAINER
+       ========================================================== -->
+    <main id="mainAppContainer">
+
+        <!-- 1. HOME VIEW -->
+        <section id="homeView" class="view-section active">
+            <!-- Hero Black Video Section (Design Preserved, Text Moved Below) -->
+            <div class="hero-section">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                    <source src="website-wallpaper.mp4" type="video/mp4">
+                </video>
+                <div class="hero-cinematic-overlay"></div>
+            </div>
+
+            <!-- Editorial Trust Strip (With Fixed Visible "Top Satisfaction" Icon) -->
+            <div class="trust-editorial-strip">
+                <div class="container">
+                    <div class="trust-grid">
+                        <div class="trust-box">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <h5>Professional Artists</h5>
+                        </div>
+                        <div class="trust-box">
+                            <i class="fa-solid fa-gem"></i>
+                            <h5>Premium Products</h5>
+                        </div>
+                        <div class="trust-box">
+                            <i class="fa-solid fa-heart"></i>
+                            <h5>Personalized Care</h5>
+                        </div>
+                        <div class="trust-box">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h5>Hygiene & Safety</h5>
+                        </div>
+                        <div class="trust-box">
+                            <i class="fa-solid fa-award"></i>
+                            <h5>Top Satisfaction</h5>
+                        </div>
+                        <div class="trust-box">
+                            <i class="fa-solid fa-crown"></i>
+                            <h5>Luxury Experience</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- "Beauty Begins With You" Moved Section (Replacing the Two Old Service Cards) -->
+            <section class="section-space">
+                <div class="container">
+                    <div class="hero-moved-content">
+                        <span class="hero-tag-light">Luxury Bridal & Salon Atelier</span>
+                        <h2>Beauty Begins With You</h2>
+                        <p>Professional Beauty & Makeup Services for Every Occasion</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="switchView('appointment')">Book Appointment</button>
+                            <button class="btn btn-outline-dark" onclick="switchView('services')">Explore Services</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- 2. ABOUT US VIEW -->
+        <section id="aboutView" class="view-section">
+            <div class="section-space">
+                <div class="container">
+                    <div class="about-split-layout">
+                        <div class="about-image-stack">
+                            <img src="wedding.jpg" alt="Salon Ambiance">
+                            <img src="anniversary.jpg" alt="Bridal Detail" class="floating-img">
+                        </div>
+                        <div class="about-text-content">
+                            <span style="font-size:11px; text-transform:uppercase; letter-spacing:3px; color:var(--champagne-gold); display:block; margin-bottom:15px;">Our Heritage</span>
+                            <h2 style="font-size: clamp(34px, 4vw, 46px); font-weight:400; margin-bottom:25px; line-height:1.2;">A Sanctuary of Elegance & Rejuvenation</h2>
+                            <p style="color:var(--text-muted); font-weight:300; margin-bottom:20px;">Founded by master artist Aparna, our studio represents the pinnacle of luxury beauty services. We merge rigorous hygiene protocols with artistic mastery to provide an unmatched salon experience.</p>
+                            <p style="color:var(--text-muted); font-weight:300; margin-bottom:30px;">Every client is treated as a canvas for individualized transformation, utilizing world-renowned international brands like MAC, Bobbi Brown, and Kryolan.</p>
+                            <button class="btn btn-primary" onclick="switchView('services')">View Our Menu</button>
+                        </div>
+                    </div>
+
+                    <!-- Makeup Artists / Team Section -->
+                    <div style="margin-top: 140px;">
+                        <div class="section-header">
+                            <span>The Masters</span>
+                            <h2>Our Makeup Artists</h2>
+                        </div>
+                        <div class="artists-grid">
+                            <div class="artist-editorial-card">
+                                <div class="artist-img-box">
+                                    <img src="bridal.jpg" alt="Aparna Roy">
+                                </div>
+                                <div class="artist-details">
+                                    <h4>Aparna Roy</h4>
+                                    <span class="role-tag">Founder & Master Bridal Artist</span>
+                                    <p>With over 10 years of expertise in high-profile bridal transformations and editorial styling.</p>
+                                    <div class="artist-meta-list">
+                                        <span><strong>Specialization:</strong> Bengali & Luxury Bridal</span>
+                                        <span><strong>Experience:</strong> 10+ Years</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="artist-editorial-card">
+                                <div class="artist-img-box">
+                                    <img src="hair.jpg" alt="Priya Sen">
+                                </div>
+                                <div class="artist-details">
+                                    <h4>Priya Sen</h4>
+                                    <span class="role-tag">Senior Hair & Party Expert</span>
+                                    <p>Renowned for intricate hair design, advanced coloring, and seamless party glam makeovers.</p>
+                                    <div class="artist-meta-list">
+                                        <span><strong>Specialization:</strong> Hair Design & Party Glam</span>
+                                        <span><strong>Experience:</strong> 7 Years</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="artist-editorial-card">
+                                <div class="artist-img-box">
+                                    <img src="skin.jpg" alt="Sneha Das">
+                                </div>
+                                <div class="artist-details">
+                                    <h4>Sneha Das</h4>
+                                    <span class="role-tag">Skin Aesthetics Specialist</span>
+                                    <p>Dedicated skin therapist providing clinical-grade facials and pre-bridal glow treatments.</p>
+                                    <div class="artist-meta-list">
+                                        <span><strong>Specialization:</strong> Skincare & Facials</span>
+                                        <span><strong>Experience:</strong> 6 Years</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SERVICES VIEW (VERTICAL 9:16 REELS/SHORTS FORMAT) -->
+        <section id="servicesView" class="view-section">
+            <div class="section-space">
+                <div class="container">
+                    <div class="section-header">
+                        <span>Comprehensive Offerings</span>
+                        <h2>Our Luxury Services</h2>
+                    </div>
+                    <div class="services-editorial-grid">
+                        <div class="service-editorial-card">
+                            <div class="service-img-wrap">
+                                <video class="service-video" controls playsinline preload="metadata">
+                                    <source src="Bengali-Bridal.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="service-info-box">
+                                <h3>Bridal Makeup</h3>
+                                <p>Exquisite bridal styling ranging from traditional Bengali artistry to modern minimalist wedding looks.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Book Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="service-editorial-card">
+                            <div class="service-img-wrap">
+                                <video class="service-video" controls playsinline preload="metadata">
+                                    <source src="Hair Styling.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="service-info-box">
+                                <h3>Hair Styling</h3>
+                                <p>Precision cuts, balayage coloring, Keratin treatments, and elegant occasion updos.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Book Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="service-editorial-card">
+                            <div class="service-img-wrap">
+                                <video class="service-video" controls playsinline preload="metadata">
+                                    <source src="Skin Care.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="service-info-box">
+                                <h3>Skin Care</h3>
+                                <p>Deep cleansing rituals, gold facials, Hydra-facials, and customized skin conditioning therapies.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Book Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="service-editorial-card">
+                            <div class="service-img-wrap">
+                                <video class="service-video" controls playsinline preload="metadata">
+                                    <source src="Nails.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="service-info-box">
+                                <h3>Nails</h3>
+                                <p>Luxury manicures, spa pedicures, precise gel extensions, and bespoke nail art.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Book Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="service-editorial-card">
+                            <div class="service-img-wrap">
+                                <video class="service-video" controls playsinline preload="metadata">
+                                    <source src="Party Makeup.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="service-info-box">
+                                <h3>Party Makeup</h3>
+                                <p>High-definition party and reception makeovers designed to stay radiant through flash photography.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Book Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="service-editorial-card">
+                            <div class="service-img-wrap">
+                                <video class="service-video" controls playsinline preload="metadata">
+                                    <source src="Fashion Makeup.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="service-info-box">
+                                <h3>Fashion Makeup</h3>
+                                <p>Editorial runway looks and professional portfolio photoshoot styling for models and creators.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Book Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. GALLERY VIEW (VERTICAL 9:16 REELS / SHORTS FORMAT) -->
+        <section id="galleryView" class="view-section">
+            <div class="section-space">
+                <div class="container">
+                    <div class="section-header">
+                        <span>Visual Portfolio</span>
+                        <h2>The Editorial Gallery</h2>
+                    </div>
+
+                    <!-- Category Filter Chips (Unchanged and Fully Functional) -->
+                    <div class="gallery-filter-bar" id="galleryFilterBar">
+                        <button class="filter-chip active" data-filter="all">All</button>
+                        <button class="filter-chip" data-filter="bengali-bridal">Bengali Bridal</button>
+                        <button class="filter-chip" data-filter="bengali-reception">Bengali Reception</button>
+                        <button class="filter-chip" data-filter="bengali-wedding">Bengali Wedding</button>
+                        <button class="filter-chip" data-filter="western">Western</button>
+                        <button class="filter-chip" data-filter="party">Party</button>
+                        <button class="filter-chip" data-filter="fashion">Fashion</button>
+                        <button class="filter-chip" data-filter="muslim-wedding">Muslim Wedding</button>
+                        <button class="filter-chip" data-filter="non-bengali">Non-Bengali Bridal</button>
+                        <button class="filter-chip" data-filter="anniversary">Anniversary</button>
+                        <button class="filter-chip" data-filter="photoshoot">Photoshoot</button>
+                        <button class="filter-chip" data-filter="artistic">Artistic Makeup</button>
+                    </div>
+
+                    <!-- Gallery Cards Grid with 9:16 Vertical Video Reels & Bottom Details -->
+                    <div class="gallery-editorial-grid" id="galleryGridContainer">
+                        <div class="gallery-card-item" data-category="bengali-bridal">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="Bridal-Makeup.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Bengali Bridal</span>
+                                <h4>Traditional Red & Gold Elegance</h4>
+                                <p>Authentic chandan motifs, alta adornment, and regal Banarasi silk bridal styling.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="bengali-reception">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="bengali-reception-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Bengali Reception</span>
+                                <h4>Modern Evening Glamour</h4>
+                                <p>Shimmering soft-glam eyeshadows, sculpted cheekbones, and contemporary curls.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="bengali-wedding">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="bengali-wedding-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Bengali Wedding</span>
+                                <h4>Authentic Wedding Ceremony Styling</h4>
+                                <p>Long-wear ceremonial makeup perfected to withstand warm wedding mandap rituals.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="western">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="western-makeup-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Western</span>
+                                <h4>Chic Minimalist Aesthetic</h4>
+                                <p>Effortless monochromatic nude palettes and dewy glass-skin complexion finish.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="party">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="party-glam-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Party</span>
+                                <h4>Radiant Evening Glow</h4>
+                                <p>Velvety matte base, statement bold lips, and voluminous party hair styling.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="fashion">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="fashion-runway-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Fashion</span>
+                                <h4>Editorial Runway Statement</h4>
+                                <p>High-contrast runway concepts, graphic eyeliners, and high-fashion aesthetics.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="muslim-wedding">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="muslim-wedding-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Muslim Wedding</span>
+                                <h4>Royal Nikah Styling</h4>
+                                <p>Opulent passas, intricate hijab draping, and soft smoky eye definitions.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="non-bengali">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="non-bengali-bridal-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Non-Bengali Bridal</span>
+                                <h4>South & North Indian Heritage</h4>
+                                <p>Kanjeevaram styling, South Indian braid decor, and royal North Indian lehenga looks.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="anniversary">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="anniversary-look-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Anniversary</span>
+                                <h4>Couples Celebration Radiance</h4>
+                                <p>Sophisticated gala styling with timeless elegance and youthful skin luminosity.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="photoshoot">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="photoshoot-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Photoshoot</span>
+                                <h4>High-Definition Portfolio Art</h4>
+                                <p>Studio-lighting-ready textures that resist flash glare and accentuate bone structure.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="artistic">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="artistic-makeup-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Artistic Makeup</span>
+                                <h4>Avant-Garde Creative Concept</h4>
+                                <p>Experimental textures, theatrical color blending, and high-fashion editorial art.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card-item" data-category="party">
+                            <div class="gallery-video-wrap">
+                                <video class="gallery-card-video" controls playsinline preload="metadata">
+                                    <source src="cocktail-party-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="gallery-card-content">
+                                <span class="gallery-cat-tag">Party</span>
+                                <h4>Cocktail Evening Sophistication</h4>
+                                <p>Effortlessly glamorous modern occasion look with sleek updo styling.</p>
+                                <a href="#" class="explore-link" onclick="switchView('appointment')">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PRICES VIEW -->
+        <section id="pricesView" class="view-section">
+            <div class="section-space">
+                <div class="container">
+                    <div class="section-header">
+                        <span>Transparent Investment</span>
+                        <h2>Pricing & Packages</h2>
+                    </div>
+                    <div class="pricing-editorial-container">
+                        <div class="price-category-box">
+                            <h3>Bridal & Reception Artistry <span>Tier I</span></h3>
+                            <div class="price-row">
+                                <div>
+                                    <span class="service-name">Bengali Traditional Bridal Makeup</span>
+                                    <span class="service-desc">Includes HD airbrush, premium draping & custom hair styling</span>
+                                </div>
+                                <span class="service-cost">₹15,000</span>
+                            </div>
+                            <div class="price-row">
+                                <div>
+                                    <span class="service-name">Reception Glamour Package</span>
+                                    <span class="service-desc">Evening reception look with luxury lash styling</span>
+                                </div>
+                                <span class="service-cost">₹12,000</span>
+                            </div>
+                            <div class="price-row">
+                                <div>
+                                    <span class="service-name">Muslim Nikah Bridal Styling</span>
+                                    <span class="service-desc">Sophisticated hijab styling & royal bridal makeup</span>
+                                </div>
+                                <span class="service-cost">₹14,000</span>
+                            </div>
+                        </div>
+
+                        <div class="price-category-box">
+                            <h3>Party, Fashion & Editorial <span>Tier II</span></h3>
+                            <div class="price-row">
+                                <div>
+                                    <span class="service-name">HD Party / Guest Makeup</span>
+                                    <span class="service-desc">Flawless long-wear finish with hairstyle</span>
+                                </div>
+                                <span class="service-cost">₹4,500</span>
+                            </div>
+                            <div class="price-row">
+                                <div>
+                                    <span class="service-name">Professional Photoshoot Look</span>
+                                    <span class="service-desc">Camera-optimized makeup for portfolios & models</span>
+                                </div>
+                                <span class="service-cost">₹6,000</span>
+                            </div>
+                        </div>
+
+                        <div class="price-category-box">
+                            <h3>Hair & Skin Treatments <span>Tier III</span></h3>
+                            <div class="price-row">
+                                <div>
+                                    <span class="service-name">Global Hair Coloring & Highlights</span>
+                                    <span class="service-desc">Using professional ammonia-free Italian formulas</span>
+                                </div>
+                                <span class="service-cost">₹4,000+</span>
+                            </div>
+                            <div class="price-row">
+                                <div>
+                                    <span class="service-name">Luxury Gold & Diamond Facial</span>
+                                    <span class="service-desc">Intense cellular hydration and instant luminosity</span>
+                                </div>
+                                <span class="service-cost">₹3,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. REVIEWS VIEW -->
+        <section id="reviewsView" class="view-section">
+            <div class="section-space">
+                <div class="container">
+                    <div class="section-header">
+                        <span>Testimonials</span>
+                        <h2>Words From Our Clients</h2>
+                    </div>
+                    <div class="reviews-editorial-grid">
+                        <div class="review-editorial-card">
+                            <div>
+                                <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <p>"Aparna made me look and feel like royalty on my wedding day. The makeup lasted through all the traditional rituals without a single smudge. Absolutely magical experience!"</p>
+                            </div>
+                            <div class="client-meta">
+                                <h5>Sreya Banerjee</h5>
+                                <span>Bengali Bridal Client</span>
+                            </div>
+                        </div>
+                        <div class="review-editorial-card">
+                            <div>
+                                <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <p>"The ambiance is wonderfully serene, and the hair styling team understood exactly what I wanted for my sister's reception. Highly professional service!"</p>
+                            </div>
+                            <div class="client-meta">
+                                <h5>Debarati Roy</h5>
+                                <span>Party & Hair Styling</span>
+                            </div>
+                        </div>
+                        <div class="review-editorial-card">
+                            <div>
+                                <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <p>"I took their self-grooming masterclass and it completely transformed my confidence with everyday makeup. Impeccable hygiene and great instructors."</p>
+                            </div>
+                            <div class="client-meta">
+                                <h5>Tanushree Sen</h5>
+                                <span>Masterclass Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT VIEW -->
+        <section id="contactView" class="view-section">
+            <div class="section-space">
+                <div class="container">
+                    <div class="contact-layout">
+                        <div class="contact-details-box">
+                            <span>Inquiries & Studio</span>
+                            <h2>Connect With Us</h2>
+                            <ul class="contact-info-list">
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <strong>Address</strong>
+                                        <a href="https://maps.app.goo.gl/zEfxP6M2hbAMjZFu7" target="_blank">Kashida, Near Primary School,Mohanpur-Paschim Medinipur - 721436</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div>
+                                        <strong>Phone</strong>
+                                        <a href="tel:+916294759787">+91 62947 59787</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <div>
+                                        <strong>WhatsApp</strong>
+                                        <a href="https://wa.me/916294759787" target="_blank">+91 62947 59787</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <div>
+                                        <strong>Email</strong>
+                                        <a href="shubhajitj3@gmail.com">shubhajitj3@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div>
+                                        <strong>Hours</strong>
+                                        <p>Monday – Sunday: 10:00 AM – 8:00 PM</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contact-form-wrapper">
+                            <h3>Send a Message</h3>
+                            <form onsubmit="handleFormSubmit(event, 'contact')">
+                                <div class="form-grid-2">
+                                    <div class="form-field">
+                                        <label>Your Name</label>
+                                        <input type="text" required placeholder="Full Name">
+                                    </div>
+                                    <div class="form-field">
+                                        <label>Email Address</label>
+                                        <input type="email" required placeholder="name@example.com">
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <label>Phone Number</label>
+                                    <input type="tel" required placeholder="+91 XXXXX XXXXX">
+                                </div>
+                                <div class="form-field">
+                                    <label>Your Message</label>
+                                    <textarea rows="4" required placeholder="Inquire about dates, bridal packages or classes..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Google Maps Embed -->
+                    <div class="map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.23456789!2d88.3512!3d22.5551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMjLCsDMzJzE4LjQiTiA4OG8yMScwNC4zIkU!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. BOOK APPOINTMENT VIEW -->
+        <section id="appointmentView" class="view-section">
+            <div class="section-space">
+                <div class="container" style="max-width: 800px;">
+                    <div class="contact-form-wrapper" style="padding: 70px;">
+                        <div class="section-header" style="margin-bottom: 40px;">
+                            <span>Reservation Desk</span>
+                            <h2>Book An Appointment</h2>
+                        </div>
+                        <form onsubmit="handleFormSubmit(event, 'appointment')">
+                            <div class="form-grid-2">
+                                <div class="form-field">
+                                    <label>Full Name</label>
+                                    <input type="text" required placeholder="Your Name">
+                                </div>
+                                <div class="form-field">
+                                    <label>Phone / WhatsApp</label>
+                                    <input type="tel" required placeholder="+91 XXXXX XXXXX">
+                                </div>
+                            </div>
+                            <div class="form-grid-2">
+                                <div class="form-field">
+                                    <label>Select Service</label>
+                                    <select required>
+                                        <option value="">Choose service...</option>
+                                        <option value="Bridal">Bengali Bridal Makeup</option>
+                                        <option value="Reception">Reception Glamour</option>
+                                        <option value="Party">Party Makeup</option>
+                                        <option value="Hair">Hair Styling / Color</option>
+                                        <option value="Skin">Facial / Skin Care</option>
+                                    </select>
+                                </div>
+                                <div class="form-field">
+                                    <label>Preferred Date</label>
+                                    <input type="date" required>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label>Special Request / Notes</label>
+                                <textarea rows="3" placeholder="Any specific time or styling preferences..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Confirm Reservation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================
+       FULLSCREEN LIGHTBOX MODAL
+       ========================================================== -->
+    <div class="fullscreen-lightbox" id="lightboxModal">
+        <button class="lightbox-close-btn" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+        <img id="lightboxImageEl" src="" alt="Enlarged Portfolio View">
+    </div>
+
+    <!-- ==========================================================
+       EDITORIAL LUXURY FOOTER
+       ========================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="brand-logo" onclick="switchView('home')">Aparna’s <span>Makeover</span></a>
+                    <p>A luxury beauty atelier dedicated to supreme bridal artistry, high-end hair design, and restorative skincare treatments.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#" onclick="switchView('home')">Home</a></li>
+                        <li><a href="#" onclick="switchView('about')">About Us</a></li>
+                        <li><a href="#" onclick="switchView('services')">Services</a></li>
+                        <li><a href="#" onclick="switchView('gallery')">Gallery</a></li>
+                        <li><a href="#" onclick="switchView('prices')">Prices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#" onclick="switchView('services')">Bridal Couture</a></li>
+                        <li><a href="#" onclick="switchView('services')">Hair Styling</a></li>
+                        <li><a href="#" onclick="switchView('services')">Skin Treatments</a></li>
+                        <li><a href="#" onclick="switchView('services')">Nail Extensions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Studio Desk</h4>
+                    <p><i class="fa-solid fa-location-dot" style="color:var(--champagne-gold); margin-right:8px;"></i> 721436, Kashida, Mohanpur-Paschim Medinipur</p>
+                    <p><i class="fa-solid fa-phone" style="color:var(--champagne-gold); margin-right:8px;"></i> <a href="tel:+916294759787">+91 62947 59787</a></p>
+                    <p><i class="fa-solid fa-envelope" style="color:var(--champagne-gold); margin-right:8px;"></i> <a href="shubhajitj3@gmail.com">shubhajitj3@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aparna’s Makeover. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/jeet_jana_999/?__pwa=1" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1DorHTstV8/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/916294759787" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================
+       CLIENT-SIDE VIEW ROUTER & INTERACTION CONTROLLER
+       ========================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburgerBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = hamburgerBtn.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    hamburgerBtn.querySelector('i').className = 'fa-solid fa-bars';
+                });
+            });
+
+            // Gallery Filtering Logic
+            const filterChips = document.querySelectorAll('.filter-chip');
+            const galleryCards = document.querySelectorAll('.gallery-card-item');
+
+            filterChips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    filterChips.forEach(c => c.classList.remove('active'));
+                    chip.classList.add('active');
+
+                    const selectedFilter = chip.getAttribute('data-filter');
+
+                    galleryCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (selectedFilter === 'all' || cardCategory === selectedFilter) {
+                            card.style.display = 'flex';
+                            setTimeout(() => card.style.opacity = '1', 50);
+                        } else {
+                            card.style.opacity = '0';
+                            setTimeout(() => card.style.display = 'none', 300);
+                        }
+                    });
+                });
+            });
+        });
+
+        // Single Page View Switcher Router
+        function switchView(viewName) {
+            // Map viewName to DOM elements
+            const viewMap = {
+                'home': 'homeView',
+                'about': 'aboutView',
+                'services': 'servicesView',
+                'gallery': 'galleryView',
+                'prices': 'pricesView',
+                'reviews': 'reviewsView',
+                'contact': 'contactView',
+                'appointment': 'appointmentView'
+            };
+
+            // Hide all sections
+            document.querySelectorAll('.view-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show target section
+            const targetId = viewMap[viewName];
+            if (targetId) {
+                document.getElementById(targetId).classList.add('active');
+            }
+
+            // Update active state on nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-view') === viewName) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Lightbox Functions
+        function openLightbox(imgSrc, captionText) {
+            const modal = document.getElementById('lightboxModal');
+            const modalImg = document.getElementById('lightboxImageEl');
+            modalImg.src = imgSrc;
+            modal.classList.add('open');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.remove('open');
+        }
+
+        document.getElementById('lightboxModal').addEventListener('click', (e) => {
+            if (e.target.id === 'lightboxModal') {
+                closeLightbox();
+            }
+        });
+
+        // Form Handlers
+        function handleFormSubmit(event, type) {
+            event.preventDefault();
+            if (type === 'contact') {
+                alert('Thank you for contacting Aparna’s Makeover. Your message has been sent successfully.');
+            } else if (type === 'appointment') {
+                alert('Your appointment reservation request has been submitted successfully! Our studio manager will call you to confirm your slot.');
+                switchView('home');
+            }
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
